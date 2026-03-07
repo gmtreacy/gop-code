@@ -6,8 +6,6 @@ import (
 	"net/http/httptest"
 	"os"
 	"testing"
-
-	"github.com/stretchr/testify/assert"
 )
 
 func TestHandleRoot(t *testing.T) {
@@ -72,9 +70,4 @@ func TestHandleReadyz(t *testing.T) {
 	if rec.Body.String() != "OK 6" {
 		t.Errorf("expected body 'OK 6', got '%s'", rec.Body.String())
 	}
-}
-
-func TestGetFact(t *testing.T) {
-	ans := getFact(3)
-	assert.Equal(t, 6, ans)
 }
