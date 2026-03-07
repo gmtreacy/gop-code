@@ -1,0 +1,7 @@
+gop-code
+*.exe
+vendor/
+.idea/
+.vscode/
+*.swp
+*.swo
