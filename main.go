@@ -27,7 +27,7 @@ func handleRoot(w http.ResponseWriter, r *http.Request) {
 
 func handleHealthz(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte("OK boomer"))
+	w.Write([]byte("OK zoomer"))
 }
 
 func handleReadyz(w http.ResponseWriter, r *http.Request) {
