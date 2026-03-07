@@ -11,6 +11,7 @@ var version = "dev"
 func main() {
 	http.HandleFunc("/", handleRoot)
 	http.HandleFunc("/healthz", handleHealthz)
+	http.HandleFunc("/readyz", handleReadyz)
 	http.ListenAndServe(":8080", nil)
 }
 
@@ -25,6 +26,11 @@ func handleRoot(w http.ResponseWriter, r *http.Request) {
 }
 
 func handleHealthz(w http.ResponseWriter, r *http.Request) {
+	w.WriteHeader(http.StatusOK)
+	w.Write([]byte("OK"))
+}
+
+func handleReadyz(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	w.Write([]byte("OK"))
 }
