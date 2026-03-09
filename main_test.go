@@ -52,8 +52,8 @@ func TestHandleHealthz(t *testing.T) {
 		t.Fatalf("expected status 200, got %d", rec.Code)
 	}
 
-	if rec.Body.String() != "OK zoomer" {
-		t.Errorf("expected body 'OK zoomer', got '%s'", rec.Body.String())
+	if rec.Body.String() != "OK boomer" {
+		t.Errorf("expected body 'OK boomer', got '%s'", rec.Body.String())
 	}
 }
 
